@@ -1,0 +1,99 @@
+@import "../helper/variables.less";
+@import "../helper/mixins.less";
+
+#boggle {
+    background-color: @orange;
+    width: 320px;
+    padding: 20px 30px;
+    * {
+        .box-sizing(border-box);
+    }
+
+    .imageContainer {
+        text-align: center;
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    #board {
+        background-color: @blue;
+        border: 5px solid @yellow;
+        margin-top: 20px;
+        .die {
+            .clearfix();
+            .face {
+                width: @face-size;
+                height: @face-size;
+                border-radius: 10px;
+                background-color: white;
+                display: inline-block;
+                margin: @cell-spacing 0 0 @cell-spacing;
+                cursor: pointer;
+                text-align: center;
+                .box-shadow(-3px 3px 6px -1px black);
+                &.selected {
+                    background-color: @light-blue;
+                }
+                .letter {
+                    position: relative;
+                    top: 17px;
+                    .semibold-mixin();
+                }
+                &:last-of-type {
+                    margin-right: @cell-spacing;
+                }
+                &.selected {
+                    background-color: @light-blue;
+                }
+            }
+            &:last-of-type {
+                .face {
+                    margin-bottom: @cell-spacing;
+                }
+            }
+        }
+    }
+
+    #wordBuilderContainer {
+        margin-top: 20px;
+        * {
+            display: inline-block;
+        }
+        label {
+            .semibold-mixin();
+        }
+    }
+
+    #submitWord {
+        border-radius: 5px;
+        background-color: white;
+        font-size: 12px;
+        margin-top: 10px;
+        display: block;
+    }
+
+    #scoreTable {
+        margin-top: 20px;
+        background-color: @yellow;
+        border-collapse: separate;
+        border-spacing: 5px;
+        th, td {
+            background-color: white;
+            padding: @table-spacing;
+            text-align: left;
+            &:last-of-type {
+                margin-right: @table-spacing;
+            }
+        }
+        thead, tfoot {
+            .semibold-mixin();
+        }
+        tfoot {
+            td {
+                background-color: @light-blue;
+                margin-bottom: @table-spacing;
+            }
+        }
+    }
+}

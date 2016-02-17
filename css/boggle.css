@@ -1,0 +1,98 @@
+#boggle {
+  background-color: #F57921;
+  width: 320px;
+  padding: 20px 30px;
+}
+#boggle * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#boggle .imageContainer {
+  text-align: center;
+}
+#boggle .imageContainer img {
+  margin: 0 auto;
+}
+#boggle #board {
+  background-color: #398BD4;
+  border: 5px solid #FFCA08;
+  margin-top: 20px;
+}
+#boggle #board .die:before,
+#boggle #board .die:after {
+  content: " ";
+  display: table;
+}
+#boggle #board .die:after {
+  clear: both;
+}
+#boggle #board .die .face {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: white;
+  display: inline-block;
+  margin: 10px 0 0 10px;
+  cursor: pointer;
+  text-align: center;
+  -webkit-box-shadow: -3px 3px 6px -1px black;
+  box-shadow: -3px 3px 6px -1px black;
+}
+#boggle #board .die .face.selected {
+  background-color: #ACCEEC;
+}
+#boggle #board .die .face .letter {
+  position: relative;
+  top: 17px;
+  font-weight: 600;
+}
+#boggle #board .die .face:last-of-type {
+  margin-right: 10px;
+}
+#boggle #board .die .face.selected {
+  background-color: #ACCEEC;
+}
+#boggle #board .die:last-of-type .face {
+  margin-bottom: 10px;
+}
+#boggle #wordBuilderContainer {
+  margin-top: 20px;
+}
+#boggle #wordBuilderContainer * {
+  display: inline-block;
+}
+#boggle #wordBuilderContainer label {
+  font-weight: 600;
+}
+#boggle #submitWord {
+  border-radius: 5px;
+  background-color: white;
+  font-size: 12px;
+  margin-top: 10px;
+  display: block;
+}
+#boggle #scoreTable {
+  margin-top: 20px;
+  background-color: #FFCA08;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+#boggle #scoreTable th,
+#boggle #scoreTable td {
+  background-color: white;
+  padding: 5px;
+  text-align: left;
+}
+#boggle #scoreTable th:last-of-type,
+#boggle #scoreTable td:last-of-type {
+  margin-right: 5px;
+}
+#boggle #scoreTable thead,
+#boggle #scoreTable tfoot {
+  font-weight: 600;
+}
+#boggle #scoreTable tfoot td {
+  background-color: #ACCEEC;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Boggle</title>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/boggle.css"/>
+</head>
+<body>
+    <div id="boggle">
+
+        <div class="imageContainer">
+            <img src="img/boggle.png"/>
+        </div>
+
+        <table id="board">
+            <tbody>
+                <tr class="die">
+                    <td class="face" id="face0">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face1">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face2">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face3">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face4">
+                        <span class="letter"></span>
+                    </td>
+                </tr>
+                <tr class="die">
+                    <td class="face" id="face5">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face6">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face7">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face8">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face9">
+                        <span class="letter"></span>
+                    </td>
+                </tr>
+                <tr class="die">
+                    <td class="face" id="face10">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face11">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face12">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face13">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face14">
+                        <span class="letter"></span>
+                    </td>
+                </tr>
+                <tr class="die">
+                    <td class="face" id="face15">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face16">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face17">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face18">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face19">
+                        <span class="letter"></span>
+                    </td>
+                </tr>
+                <tr class="die">
+                    <td class="face" id="face20">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face21">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face22">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face23">
+                        <span class="letter"></span>
+                    </td>
+                    <td class="face" id="face24">
+                        <span class="letter"></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="wordBuilderContainer">
+            <label>Current Word: </label>
+            <div id="currentWord"></div>
+        </div>
+
+        <input type="button" id="submitWord" value="Submit Word"/>
+
+        <table id="scoreTable">
+            <thead>
+                <tr>
+                    <th>Word</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td>Total:</td>
+                    <td id="totalScore">0</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </div><!-- Boggle -->
+
+    <script type="text/javascript" src="js/jQuery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/selectRandomUniqueAndShuffle.js"></script>
+    <script type="text/javascript" src="js/boggle.js"></script>
+    <script type="text/javascript">
+        new Boggle();
+    </script>
+</body>
+</html>
